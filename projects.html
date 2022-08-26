@@ -9,13 +9,30 @@
     <link rel="icon" href="https://inebby.files.wordpress.com/2014/06/milk-carton.png">
     <title>Projects - The Dairy Shop</title>
     <script> 
-
         function changeImage()
         {
         var img = document.getElementById("image");
         img.src="./famks.gif";
         return false;
         }
+
+        function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+    window.addEventListener("scroll", reveal);
+
+// To check the scroll position on page load
+reveal();
         </script>        
 </head>
 <body>
@@ -23,29 +40,37 @@
         <a class="active" href="./about.html">TDS</a>
     </div>
     <div id="tx">
-        <h1>My projects</h1>
-        <br>
-        <li>
-            2022 June - My first bigger project, which is still a WIP.
-        </li>
-        <li>
-            2022 July - My original "about"-ish <a href="https://mmiillmm.github.io/">website</a>. Extremely simple, but looks pretty good.
-        </li>
-        <li>
-            2022 August - Website for my <a href="https://mmiillmm.github.io/beneath/">video game.</a>
-        </li>
-        <br>
-        <h1>
-            I also did my take on other stuff as well, one of which is the spinning donut seen below, <a href="./code.html">code</a> included.  
-        </h1>
-        <img src="./famk.gif" alt="the almighty" width="40%" height="auto" id="image"> 
-        <button id="clickme" onclick="changeImage(); gfg_Run()">haha u found me</button>
-        <br>
-        <h1>You can find my GitHub page linked in the about section if you'd like to see my school stuff and other projects!
-        </h1>
-        <h1>
-            PS. There's a hidden button somewhere, that does something cool! ;P
-        </h1>
+        <div class="container reveal">
+                <h1>My projects</h1>
+        </div>
+                <br>
+        <div class="container reveal">        
+                <li>
+                    2022 June - My first bigger project, which is still a WIP.
+                </li>
+                <li>
+                    2022 July - My original "about"-ish <a href="https://mmiillmm.github.io/">website</a>. Extremely simple, but looks pretty good.
+                </li>
+                <li>
+                    2022 August - Website for my <a href="https://mmiillmm.github.io/beneath/">video game.</a>
+                </li>
+        </div>       
+                <br>
+        <div class="container reveal">
+                <h1>
+                    I also did my take on other stuff as well, one of which is the spinning donut seen below, <a href="./code.html">code</a> included.  
+                </h1>
+                <img src="./famk.gif" alt="the almighty" width="40%" height="auto" id="image"> 
+                <button id="clickme" onclick="changeImage(); gfg_Run()">haha u found me</button>
+                </p>
+                <br>
+                <h1>You can find my GitHub page linked in the about section if you'd like to see my school stuff and other projects!
+                </h1>
+                <h1>
+                    PS. There's a hidden button somewhere, that does something cool! ;P
+                </h1>
+        </div>
     </div>
+</div>
 </body>
-</html> 
+</html>
