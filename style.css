@@ -42,3 +42,18 @@ button{
     color: whitesmoke;
     border-style: solid;
 }
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.hel{
+    font-size: 60px;
+}
