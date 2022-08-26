@@ -8,21 +8,53 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="icon" href="https://inebby.files.wordpress.com/2014/06/milk-carton.png">
     <title>About me - The Dairy Shop</title>
+<script>
+        function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+    window.addEventListener("scroll", reveal);
+reveal();
+    </script>
 </head>
 <body>
     <div class="topnav">
-        <a class="active" href="./about.html">TDS</a>
+        <a class="active" href="./about.html">TPS</a>
     </div>
     <div id="tx">
-        <h1>Hello!</h1>
+        <div class="container reveal">
+            <h1 class="hel">Hello!</h1>
+        </div>
         <br>
-        <h2>My name is Kristóf Makai, and I'm a junior software and web engineer.</h2>
-        <h2>I've been coding for around a year now, and I'm set on improving myself as much as I possibly can.</h2>
-        <h2>I'm also making a video game, that I have a website for. All of my available projects will be linked in the <a href="./projects.html">projects</a> tab!</h2>
         <br>
-        <h1>
-            <a href="https://github.com/mmiillmm">Here</a>, you can find everything that isn't listed on this site.
-        </h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container reveal">
+            <h2>My name is Kristóf Makai, a junior software- and web engineer.</h2>
+            <h2>I've been coding for around a year now, and I'm set on improving myself as much as possible.</h2>
+            <h2>I'm also making a video game, that I have a website for. All of my available projects will be linked in the <a href="./projects.html">projects</a> tab!</h2>
+        </div>
+        <br>
+        <div class="container reveal">
+            <h1>
+                <a href="https://github.com/mmiillmm">Here</a>, you can find everything that isn't listed on this site.
+            </h1>
+        </div>
 
     </div>
 </body>
