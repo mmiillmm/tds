@@ -34,3 +34,11 @@ a{
     color: black;
     text-decoration: underline;
 }
+
+button{
+    background-color: whitesmoke;
+    border-color: whitesmoke;
+    box-shadow: none;
+    color: whitesmoke;
+    border-style: solid;
+}
