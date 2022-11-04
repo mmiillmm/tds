@@ -312,13 +312,13 @@ section{
 }
 
 #s2{
-    background-image: url(/img/blob-scene-haikei.svg);
+    background-color: #3d3d3d;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 #s3{
-    background-image: url(/img/layered-waves-haikei.svg);
+    background-color: #212121;
     background-repeat: no-repeat;
     background-size: 100%;
 }
