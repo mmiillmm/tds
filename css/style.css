@@ -3,17 +3,35 @@
     padding: 0;
 }
 
-html{
-    scroll-behavior: smooth;
-}
-
 body {
     background-color: black;
     display: grid;
     line-height: 1.6;
     margin: 0px;
-    overflow: hidden;
     place-items: center;
+}
+
+html {
+    --scrollbarBG: #1b1b1b;
+    --thumbBG: #4d4d4d;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
 }
 
 a{
@@ -77,11 +95,111 @@ h1>.mag>.mag-text {
     white-space: nowrap;
 }
 
+h1>.mag2 {
+    display: inline-block;
+    position: relative;
+}
+
+h1>.mag2>.mag-text2 {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(to right,
+            var(--c4),
+            var(--c5),
+            var(--c6),
+            var(--c7));
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+.custom-shape-divider-top-1667567540 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1667567540 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-top-1667567540 .shape-fill {
+    fill: #5f5f5f;
+}
+
+.custom-shape-divider-bottom-1667567604 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1667567604 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1667567604 .shape-fill {
+    fill: #5f5f5f;
+}
+
+.custom-shape-divider-bottom-1667567658 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1667567658 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1667567658 .shape-fill {
+    fill: #5F5F5F;
+}
+
+.custom-shape-divider-top-1667567737 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1667567737 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 59px;
+}
+
+.custom-shape-divider-top-1667567737 .shape-fill {
+    fill: #5F5F5F;
+}
+
 div.v {
     display: flex;
     width: 1040px;
     height: 400px;
-    background: linear-gradient(-45deg, #002a9e, #450a6d, #da06cf, #23d5ab);
+    background: linear-gradient(-45deg, #231620, #a88898, #caaaa9, #dbc5cd, #c5b2c2, #231620);
 	background-size: 400% 400%;
 	animation: gradient 5s ease infinite;
     align-items: center;
@@ -110,7 +228,7 @@ section{
     align-items: center;
     justify-content: center;
     min-height: 800px;
-    padding: 100px 20vw;
+    padding-bottom: 20vh;
     width: 100%;
     scroll-snap-align: start;
 }
@@ -120,6 +238,10 @@ section{
     --c1: #ef9af2;
     --c2: #831187;
     --c3: #240c76;
+    --c4: #787492;
+    --c5: #d6b2a5;
+    --c6: #b093a3;
+    --c7: #787492;
 }
 
 .spec1{
@@ -136,16 +258,28 @@ section{
 
 
 .navbar{
-    margin-top: 10px;
+    margin: 10px;
     font-family: 'Roboto', sans-serif;
     position: fixed;
     top: 0;
     z-index: 1;
     display: flex;
     width: 30%;
-    height: 60px;
+    height: 80px;
     background-color: rgba(10, 10, 10, 0.7);
     border-radius: 30px;
+    transform: translateY(-80%);
+    transition: 0.5s;
+}
+
+.navbar:hover {
+    transform: translateY(0);
+}
+
+.navbar img{
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .navbar ul{
@@ -180,13 +314,13 @@ section{
 #s2{
     background-image: url(/img/blob-scene-haikei.svg);
     background-repeat: no-repeat;
-    background-size: 90%;
+    background-size: 100%;
 }
 
 #s3{
     background-image: url(/img/layered-waves-haikei.svg);
     background-repeat: no-repeat;
-    background-size: 90%;
+    background-size: 100%;
 }
 
 @keyframes rainbow {
