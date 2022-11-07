@@ -197,7 +197,7 @@ h1>.mag2>.mag-text2 {
 
 div.v {
     display: flex;
-    width: 1040px;
+    width: 50vw;
     height: 400px;
     background: linear-gradient(-45deg, #231620, #a88898, #caaaa9, #dbc5cd, #c5b2c2, #231620);
 	background-size: 400% 400%;
@@ -209,6 +209,11 @@ div.v {
     gap: 20px;
 }
 
+.cont{
+    max-width: 50vw;
+    width: 80%;
+    height: auto;
+}
 
 div.v img{
     width: 25%;
@@ -229,7 +234,7 @@ section{
     justify-content: center;
     min-height: 800px;
     padding-bottom: 20vh;
-    width: 100%;
+    width: 99.2vw;
     scroll-snap-align: start;
 }
 
@@ -264,7 +269,8 @@ section{
     top: 0;
     z-index: 1;
     display: flex;
-    width: 30%;
+    max-width: 500px;
+    width: 25vw;
     height: 80px;
     background-color: rgba(10, 10, 10, 0.7);
     border-radius: 30px;
